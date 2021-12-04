@@ -10,7 +10,7 @@ function App() {
   const [shops, setShops] = useState([]);
 
   useEffect(() => {
-    fetch("https://maps.googleapis.com/maps/api/place/textsearch/json?query=cafe%in%Athens&key=AIzaSyDZOB6FoiTv_3JOQvtLhc2L-QW7j4wy96g")
+    fetch("https://maps.googleapis.com/maps/api/place/textsearch/json?query=cafe%in%Athens&key=AIzaSyDZOB6FoiTv_3JOQvtLhc2L-QW7j4wy96g", {mode: "cors"})
       .then(res => res.json())
       .then((result) => {
         setIsLoaded(true);
