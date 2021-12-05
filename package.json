@@ -2,6 +2,7 @@
   "name": "coffeeshop",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://maps.googleapis.com",
   "dependencies": {
     "@craco/craco": "^6.4.2",
     "@headlessui/react": "^1.4.2",

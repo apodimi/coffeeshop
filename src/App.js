@@ -11,7 +11,7 @@ function App() {
   var config = {
     method: 'get',
     url: apiUrl,
-    headers: { "Access-Control-Allow-Origin": "*"}
+    headers: {},
   };
   
   axios(config)
