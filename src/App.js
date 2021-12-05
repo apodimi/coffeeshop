@@ -6,19 +6,21 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const apiUrl = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=cafe%in%Athens&key=AIzaSyDZOB6FoiTv_3JOQvtLhc2L-QW7j4wy96g";
-
+//headers: {"Access-Control-Allow-Origin": "*"}
 function App() {
-  const [shops , setShops] = useState(null);
-
-  useEffect(() => {
-    axios.get(apiUrl, {
-      headers: { }
-    }).then((response) => {
-      setShops(response.data);
-      console.log(response.data);
-    })
-      
-  }, [])
+  var config = {
+    method: 'get',
+    url: apiUrl,
+    headers: { "Access-Control-Allow-Origin": "*"}
+  };
+  
+  axios(config)
+  .then(function (response) {
+    console.log(JSON.stringify(response.data));
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
 
   return (
     <div className="App">
