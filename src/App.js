@@ -3,13 +3,20 @@ import './App.css';
 import  Navbar from '../src/components/navbar/MainNavbar.js'
 import HomePageHeader from './components/HomePageHeader';
 import { useState, useEffect } from 'react';
+import axios from 'axios';
+
+const apiUrl = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=cafe%in%Athens&key=AIzaSyDZOB6FoiTv_3JOQvtLhc2L-QW7j4wy96g";
 
 function App() {
-
+  const [shops , setShops] = useState(null);
 
   useEffect(() => {
-    fetch("https://maps.googleapis.com/maps/api/place/textsearch/json?query=cafe%in%Athens&key=AIzaSyDZOB6FoiTv_3JOQvtLhc2L-QW7j4wy96g", {mode: "no-cors"})
-      .then(res =>   console.log(res));
+    axios.get(apiUrl, {
+      headers: { }
+    }).then((response) => {
+      setShops(response.data);
+      console.log(response.data);
+    })
       
   }, [])
 
