@@ -2,7 +2,7 @@
   "name": "coffeeshop",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://maps.googleapis.com",
+  "proxy": "https://maps.googleapis.com/",
   "dependencies": {
     "@craco/craco": "^6.4.2",
     "@headlessui/react": "^1.4.2",
@@ -11,6 +11,7 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.24.0",
+    "google-maps-react": "^2.0.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
